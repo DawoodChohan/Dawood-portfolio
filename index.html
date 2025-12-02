@@ -332,37 +332,35 @@
               <a href="https://www.linkedin.com/in/m-dawood-afzaal-77610b331/" target="_blank" rel="noopener">LinkedIn</a>
               <a href="https://github.com/DawoodChohan" target="_blank" rel="noopener">GitHub</a>
               <a href="#" target="_blank" rel="noopener">Fiver</a>
-              <a href="#" target="_blank" rel="noopener">UpWork</a>
-              <a href="#" target="_blank" rel="noopener">WellFound</a>
+              <a href="https://www.upwork.com/freelancers/~01db85038363b0db10?viewMode=1" target="_blank" rel="noopener">UpWork</a>
+              <a href="https://wellfound.com/u/dawood-afzaal" target="_blank" rel="noopener">WellFound</a>
 
             </div>
           </div>
 
-          <form class="contact-form glass">
+          <form id="contactForm" class="contact-form glass">
             <div class="form-row">
               <div class="form-field">
                 <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name (placeholder)" />
+                <input id="name" name="name" type="text" placeholder="Your name" required />
               </div>
               <div class="form-field">
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="your@email.com (placeholder)" />
+                <input id="email" name="email" type="email" placeholder="your@email.com" required />
               </div>
             </div>
             <div class="form-field">
               <label for="subject">Subject</label>
-              <input id="subject" type="text" placeholder="Project, opportunity, or question (placeholder)" />
+              <input id="subject" name="subject" type="text" placeholder="Project, opportunity, or question" required />
             </div>
             <div class="form-field">
               <label for="message">Message</label>
-              <textarea id="message" rows="4" placeholder="Tell me about your project or role (placeholder)"></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or role" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" disabled>
-              Send Message (placeholder only)
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Send Message
             </button>
-            <p class="form-note">
-              This form is currently a visual placeholder. Connect it to a backend or service to make it functional.
-            </p>
+            <div id="formMessage" class="form-message" style="display: none;"></div>
           </form>
         </div>
       </div>
@@ -376,6 +374,7 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="https://unpkg.com/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
